@@ -1,4 +1,4 @@
-# Contributing to Soenneker.Utils.AutoBogus.FakeItEasy
+﻿# Contributing to Soenneker.Utils.AutoBogus.FakeItEasy
 
 We're excited that you're interested in contributing!
 
