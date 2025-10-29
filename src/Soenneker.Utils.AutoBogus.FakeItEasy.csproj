@@ -1,7 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <Platforms>AnyCPU</Platforms>
         <NoWarn>$(NoWarn);1591</NoWarn>
@@ -9,7 +11,7 @@
 
     <PropertyGroup>
         <Description>An AutoFakerBinder for interfaces and abstract objects using FakeItEasy</Description>
-        <Version Condition="'$(BUILD_VERSION)' == ''">3.0.0</Version>
+        <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Utils.AutoBogus.FakeItEasy</AssemblyName>
         <PackageId>Soenneker.Utils.AutoBogus.FakeItEasy</PackageId>
@@ -32,10 +34,10 @@
         <LangVersion>latest</LangVersion>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageIcon>icon.png</PackageIcon>
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild></PropertyGroup>
-    
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
     <ItemGroup>
-        
         <None Include="..\README.md" Pack="true" PackagePath="\" />
         <None Include="..\LICENSE" Pack="true" PackagePath="\" />
         <None Include="..\icon.png" Pack="true" PackagePath="\" />
@@ -43,6 +45,6 @@
 
     <ItemGroup>
         <PackageReference Include="FakeItEasy" Version="8.3.0" />
-        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="3.0.809" />
+        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="4.0.810" />
     </ItemGroup>
 </Project>
