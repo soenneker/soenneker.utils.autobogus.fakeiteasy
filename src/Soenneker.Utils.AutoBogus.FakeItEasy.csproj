@@ -16,7 +16,7 @@
         <AssemblyName>Soenneker.Utils.AutoBogus.FakeItEasy</AssemblyName>
         <PackageId>Soenneker.Utils.AutoBogus.FakeItEasy</PackageId>
         <PackageTags>utils autobogus fakeiteasy bogus fake mock unit fixture tests fakeiteasyautofakerbinder util csharp dotnet c# .net</PackageTags>
-        <Copyright>Copyright © 2024-2025 Jake Soenneker</Copyright>
+        <Copyright>Copyright © 2024-2026 Jake Soenneker</Copyright>
         <Authors>Jake Soenneker</Authors>
         <Company>https://soenneker.com</Company>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
