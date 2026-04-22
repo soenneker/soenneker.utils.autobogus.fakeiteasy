@@ -1,17 +1,16 @@
 using AwesomeAssertions;
-using Soenneker.Tests.FixturedUnit;
+using Soenneker.Tests.HostedUnit;
 using Soenneker.Utils.AutoBogus.FakeItEasy.Tests.Dtos;
-using Xunit;
 
 
 namespace Soenneker.Utils.AutoBogus.FakeItEasy.Tests;
 
-[Collection("Collection")]
-public class FakeItEasyAutoFakerBinderTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public class FakeItEasyAutoFakerBinderTests : HostedUnitTest
 {
     private readonly AutoFaker _faker;
 
-    public FakeItEasyAutoFakerBinderTests(Fixture fixture, ITestOutputHelper testOutputHelper) : base(fixture, testOutputHelper)
+    public FakeItEasyAutoFakerBinderTests(Host host) : base(host)
     {
         _faker = new AutoFaker
         {
@@ -19,14 +18,14 @@ public class FakeItEasyAutoFakerBinderTests : FixturedUnitTest
         };
     }
 
-    [Fact]
+    [Test]
     public void Should_Generate()
     {
         var result = _faker.Generate<TestClass>();
         result.Should().NotBeNull();
     }
 
-    [Fact]
+    [Test]
     public void Should_Generate_Abstract()
     {
         var result = _faker.Generate<TestAbstractClass>();
