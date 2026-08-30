@@ -3,12 +3,13 @@
 [![](https://img.shields.io/nuget/dt/soenneker.utils.autobogus.fakeiteasy.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.utils.autobogus.fakeiteasy/)
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.utils.autobogus.fakeiteasy/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.utils.autobogus.fakeiteasy/actions/workflows/codeql.yml)
 
-# ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Utils.AutoBogus.FakeItEasy
-### An AutoFakerBinder for interfaces and abstract objects using FakeItEasy
+# Soenneker.Utils.AutoBogus.FakeItEasy
+
+A FakeItEasy binder that lets `Soenneker.Utils.AutoBogus` create and populate interfaces and abstract classes.
 
 ## Installation
 
-```
+```bash
 dotnet add package Soenneker.Utils.AutoBogus.FakeItEasy
 ```
 
@@ -19,4 +20,8 @@ var faker = new AutoFaker
 {
     Binder = new FakeItEasyAutoFakerBinder()
 };
+
+IOrderService service = faker.Generate<IOrderService>();
 ```
+
+Concrete types continue to use AutoBogus's default construction path. Interface and abstract-type requests are created with `A.Fake<T>()`, then their writable members are populated by AutoBogus where the generated proxy permits it. Retain the configured `AutoFaker` when generating repeatedly so its binder and reflection caches can be reused.
