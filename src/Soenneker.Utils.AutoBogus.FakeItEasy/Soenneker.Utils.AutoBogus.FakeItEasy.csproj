@@ -47,6 +47,6 @@
 
     <ItemGroup>
         <PackageReference Include="FakeItEasy" Version="9.0.1" />
-        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="11.0.1001" />
+        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="11.0.1002" />
     </ItemGroup>
 </Project>
